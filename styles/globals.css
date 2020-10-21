@@ -1,16 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;400;700&display=swap');
+
 html,
 body {
-  padding: 0;
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Exo 2', sans-serif;;
+  color: white;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.wrapper{
+  height: 100vh;
+  background-image: linear-gradient(
+    31deg, 
+  rgba(237,3,16,0.9108018207282913) 0%, 
+  rgba(92,15,16,0.9556197478991597) 37%, 
+  rgba(25,21,22,0.9640231092436975) 63%), 
+  url('../public/18199654.jpg');
+  background-size: cover;
 }
 
-* {
-  box-sizing: border-box;
+.header-container {
+  min-height: 13rem;
+}
+
+header {
+  max-width: 80rem;
+  min-height: 13rem;
+  margin: 0 auto;
+}
+
+.logo{
+  width: 13rem;
+}
+
+.image-list{
+  width: 25rem;
 }
