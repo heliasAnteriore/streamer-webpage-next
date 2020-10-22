@@ -1,27 +1,23 @@
+import { Nav, Navbar } from 'react-bootstrap';
+import { routes } from '../helpers/route';
 
 const Header = () => {
+  const renderMenuList = () => routes.map((item,i) => {
+    return  <Nav.Item className="menu-text" key={i}>{item.name}</Nav.Item>
+  })
+
   return (
-    <div className="header-container">
-      <header className="flex flex-row justify-between items-center">
-        <img className="logo" src="/logo.png"/>
-        <div className="menu-header">
-          <ul className="menu-list flex flex-row space-x-4 text-3xl">
-            <li>
-              Youtube
-            </li>
-            <li>
-              FB Gaming
-            </li>
-            <li>
-              About
-            </li>
-            <li>
-              Contact
-            </li>
-          </ul>
-        </div>
-      </header>
-    </div>
+    <Navbar expand="lg" variant="dark">
+        <Navbar.Brand>
+          <img className="logo" src="/logo.png"/>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="menu-list"/>
+        <Navbar.Collapse className="justify-content-end" id="menu-list">
+          <Nav>
+            {renderMenuList()}
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
   )
 }
 

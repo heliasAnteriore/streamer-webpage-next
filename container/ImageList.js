@@ -4,12 +4,12 @@ const ImageList = (props) => {
     direction
   } = props;
 
-  const renderList = () => list.map((item) => {
-    return <img className="image-list" src={item.source} alt={item.name}/>
+  const renderList = () => list.map((item, i) => {
+    return <img className="image-list" key={i} src={item.source} alt={item.name}/>
   })
 
   return(
-    <div className={`mt-8 flex flex-${direction} justify-between`}>
+    <div className="image-list-container">
       {renderList()}
     </div>
   )
